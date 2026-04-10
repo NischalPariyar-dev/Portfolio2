@@ -1,9 +1,7 @@
-/* --- UNIVERSAL STYLES --- */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Inter is now the primary font */
     font-family: 'Inter', sans-serif;
 }
 
@@ -26,7 +24,6 @@ body {
     z-index: -1;
 }
 
-/* --- NAVIGATION --- */
 header {
     width: 100%;
     padding: 40px 0;
@@ -53,7 +50,6 @@ nav a:hover, nav a.active {
     text-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
 }
 
-/* --- THE MAIN GLASS CARD --- */
 .glass-card {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
