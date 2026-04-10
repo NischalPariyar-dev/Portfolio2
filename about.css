@@ -1,13 +1,14 @@
-/* General Reset */
+/* --- UNIVERSAL STYLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Inter is now the primary font */
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: #0f172a; /* Deep dark blue */
+    background: #0f172a;
     background: radial-gradient(circle at top right, #1e293b, #0f172a);
     color: white;
     min-height: 100vh;
@@ -17,57 +18,70 @@ body {
     overflow-x: hidden;
 }
 
-/* Floating Glow Effect */
 .background-overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 50% 50%, rgba(52, 152, 219, 0.05) 0%, transparent 70%);
     z-index: -1;
 }
 
-/* Navigation */
+/* --- NAVIGATION --- */
 header {
     width: 100%;
-    padding: 30px 0;
+    padding: 40px 0;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 nav a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     transition: 0.3s;
-    font-size: 1.1rem;
 }
 
 nav a:hover, nav a.active {
     color: #3498db;
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    text-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
 }
 
-/* The Glass Card */
+/* --- THE MAIN GLASS CARD --- */
 .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 50px;
-    max-width: 600px;
+    border-radius: 24px;
+    padding: 60px;
+    width: 90%;
+    max-width: 700px;
     text-align: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
     margin-top: 50px;
-    animation: fadeIn 1s ease-out;
+    animation: slideUp 0.8s ease-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-glow {
+    width: 80px;
+    height: 80px;
+    background: #3498db;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    filter: blur(50px);
+    opacity: 0.6;
 }
 
 .highlight {
@@ -75,37 +89,30 @@ nav a:hover, nav a.active {
     display: block;
     font-size: 2.5rem;
     margin-top: 10px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
 }
 
 .bio {
-    margin: 20px 0;
-    line-height: 1.6;
+    margin: 30px 0;
+    line-height: 1.8;
     color: #cbd5e1;
+    font-size: 1.1rem;
 }
 
 .interest-tags {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
 .interest-tags span {
-    background: rgba(52, 152, 219, 0.2);
+    background: rgba(52, 152, 219, 0.1);
     color: #3498db;
-    padding: 5px 15px;
+    padding: 6px 16px;
     border-radius: 50px;
-    font-size: 0.9rem;
-    border: 1px solid rgba(52, 152, 219, 0.3);
-}
-
-/* Profile Glow (Instead of Image) */
-.profile-glow {
-    width: 100px;
-    height: 100px;
-    background: #3498db;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    filter: blur(40px);
-    opacity: 0.5;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(52, 152, 219, 0.2);
 }
