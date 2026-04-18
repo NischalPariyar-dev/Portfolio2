@@ -3,51 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Skills | Nischal Pariyar</title>
-    <link rel="stylesheet" href="skills.css">
+    <title>Skills | Nischal Pariyar</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161b22;
+            --accent-color: #00ff41;
+            --text-color: #ffffff;
+            --secondary-text: #8b949e;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h1 { color: var(--accent-color); text-align: center; }
+
+        .skills-section {
+            margin-top: 40px;
+        }
+
+        .skill-group {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    
-    <header>
-        <nav>
-            <a href="index.html">About</a>
-            <a href="skills.html" class="active">Skills</a>
-            <a href="hobbies.html">Hobbies</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="glass-card skills-main">
-            <h2 class="page-header">Technical <span class="highlight">Proficiency</span></h2>
-            
-            <div class="skills-section">
-                <div class="skill-group">
-                    <h3>Development</h3>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>HTML & CSS</span> <span>90%</span></div>
-                        <div class="progress-container"><div class="progress-bar" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Python</span> <span>40%</span></div>
-                        <div class="progress-container"><div class="progress-bar" style="width: 40%;"></div></div>
-                    </div>
-                </div>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="skills.html" style="color: var(--accent-color);">Skills</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-                <div class="skill-group">
-                    <h3>Music</h3>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Guitar</span> <span>75%</span></div>
-                        <div class="progress-container"><div class="progress-bar" style="width: 75%;"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Singing</span> <span>40%</span></div>
-                        <div class="progress-container"><div class="progress-bar" style="width: 40%;"></div></div>
-                    </div>
+    <div class="container">
+        <h1>Technical Skills</h1>
+        
+        <div class="skills-section">
+            <div class="skill-group">
+                <h3>Web Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">Flexbox & Grid</span>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <div class="skill-group">
+                <h3>Software & Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">MS Word</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Discord Management</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Academic</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Advanced Mathematics</span>
+                    <span class="skill-tag">Economics</span>
+                    <span class="skill-tag">Report Writing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
