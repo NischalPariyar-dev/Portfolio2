@@ -4,43 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies | Nischal Pariyar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hobbies.css">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161b22;
+            --accent-color: #00ff41; /* Change this for your theme */
+            --text-color: #ffffff;
+            --secondary-text: #8b949e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Consistent Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            color: var(--secondary-text);
+            margin-bottom: 40px;
+        }
+
+        /* Hobbies Grid */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .hobby-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+        }
+
+        .hobby-card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .hobby-card p {
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+        }
+    </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    
-    <header>
-        <nav>
-            <a href="index.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="hobbies.html" class="active">Hobbies</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="glass-card">
-            <h2 class="page-header">My <span class="highlight">Passions</span></h2>
-            
-            <div class="content-grid">
-                <div class="item-card">
-                    <div class="dot"></div>
-                    <h3>Gaming</h3>
-                    <p>Focused on technical survival mechanics and redstone builds in Minecraft.</p>
-                </div>
-                <div class="item-card">
-                    <div class="dot"></div>
-                    <h3>Music</h3>
-                    <p>Managing community audio tools and discovering new soundscapes.</p>
-                </div>
-                <div class="item-card">
-                    <div class="dot"></div>
-                    <h3>Coding</h3>
-                    <p>Experimenting with clean CSS architecture and UI/UX design.</p>
-                </div>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbies.html" style="color: var(--accent-color);">Hobbies</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>My Hobbies</h1>
+        <p class="subtitle">What I do when I'm not coding or studying.</p>
+
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <h3>Gaming</h3>
+                <p>I am a big fan of Minecraft (v1.16.1), where I enjoy technical survival and building complex structures.</p>
             </div>
-        </section>
-    </main>
+
+            <div class="hobby-card">
+                <h3>Music </h3>
+                <p>I enjoy music on a whole always looking for new music and enjoy it.</p>
+            </div>
+
+            <div class="hobby-card">
+                <h3>Design Exploration</h3>
+                <p>Experimenting with UI trends like glassmorphism and dark themes is a creative outlet for me.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
